@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shrek Juices - Cart</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #faf3e0;
+            color: #333;
+        }
+
+        header {
+            text-align: center;
+            background: linear-gradient(to right, #ff6a00, #ff9800);
+            color: white;
+            padding: 15px 0;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            font-weight: bold;
+        }
+
+        .cart-container {
+            max-width: 900px;
+            margin: 30px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .cart-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px;
+            border-bottom: 2px solid #ff9800;
+        }
+
+        .cart-item img {
+            width: 80px;
+            border-radius: 10px;
+        }
+
+        .cart-item h3 {
+            font-size: 1.2em;
+            color: #ff6700;
+        }
+
+        .cart-item p {
+            margin: 5px 0;
+            font-size: 1em;
+        }
+
+        .remove-btn {
+            background-color: #e60000;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .remove-btn:hover {
+            background-color: #cc0000;
+        }
+
+        .checkout {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .checkout button {
+            background: linear-gradient(135deg, #ff7f50, #ff4500);
+            color: white;
+            font-size: 1.2em;
+            padding: 12px 18px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .checkout button:hover {
+            background: linear-gradient(135deg, #ff6347, #e60000);
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Your Cart</h1>
+    </header>
+
+    <div class="cart-container">
+        <div id="cart-items">
+        </div>
+        <div class="checkout">
+            <button onclick="checkout()">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Juice Station | All Rights Reserved</p>
+    </footer>
+
+    <script>
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+function addToCart(name, price, img) {
+    cart.push({ name, price, img });
+    
+    localStorage.setItem('cart', JSON.stringify(cart));
+    
+    renderCart();
+    
+    openCart();
+    
+    window.alert(`${name} has been added to your cart!`);
+}
+
+function renderCart() {
+    const cartItems = document.getElementById('cart-items');
+    cartItems.innerHTML = '';
+    cart.forEach((item, index) => {
+        const cartItem = document.createElement('div');
+        cartItem.className = 'cart-item';
+        cartItem.innerHTML = `
+            <img src="${item.img}" alt="${item.name}">
+            <div>
+                <h3>${item.name}</h3>
+                <p>PKR ${item.price}</p>
+            </div>
+            <button class="remove-btn" onclick="removeItem(${index})">Remove</button>
+        `;
+        cartItems.appendChild(cartItem);
+    });
+}
+
+function removeItem(index) {
+    cart.splice(index, 1);
+    
+    localStorage.setItem('cart', JSON.stringify(cart));
+    
+    renderCart();
+}
+
+function openCart() {
+    const sideCart = document.getElementById('side-cart');
+    const overlay = document.getElementById('overlay');
+    sideCart.classList.add('open');
+    overlay.classList.add('active');
+}
+
+function closeCart() {
+    const sideCart = document.getElementById('side-cart');
+    const overlay = document.getElementById('overlay');
+    sideCart.classList.remove('open');
+    overlay.classList.remove('active');
+}
+
+document.getElementById('overlay').addEventListener('click', closeCart);
+
+   
+    // </script>
+</body>
+
+</html>

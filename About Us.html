@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    <style>
+      * {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+    
+      body {
+        background-color: #f9f9f9;
+      }
+
+      .navbar {
+        background-color: #0e2d2f;
+        padding: 20px 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+
+      .navbar .logo {
+        color: #fff;
+        font-size: 36px;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        letter-spacing: 2px;
+      }
+
+      .navbar a {
+        color: white;
+        text-decoration: none;
+        padding: 12px 20px;
+        font-size: 18px;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        text-transform: uppercase;
+      }
+
+      .navbar a:hover {
+        background-color: #194e52;
+        border-radius: 5px;
+      }
+h1,h2,h3{
+  font-weight: bold;
+}
+      .vision, .mission {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 30px;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+
+      .text-left, .text-right {
+        max-width: 50%;
+      }
+
+     .story h2 {
+        font-size: 38px;
+        color: #0b2a2c;
+        text-align: center;
+        font-weight: bold;
+      }
+.story p{
+  text-align: center;
+}
+      p {
+        font-size: 18px;
+        text-align: justify;
+      }
+
+      .vision img, .mission img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+      }
+
+      .image-left {
+        order: 1;
+      }
+
+      .image-right {
+        order: 2;
+      }
+
+.content{
+  text-align: center;
+}
+ .content button {
+  background-color: #0e2d2f;
+  margin: 10px;
+  padding: 10px;
+  font-size: 20px;
+  color: white;
+ }
+.content button:hover{
+  background-color: #133d3f;
+}
+  
+footer {
+            background-color: #0e2d2f;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .footer-social a {
+            margin: 0 15px;
+            color: white;
+            font-size: 30px;
+            transition: transform 0.3s ease;
+        }
+
+        .footer-social a:hover {
+            transform: scale(1.2);
+        }
+
+
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                padding: 15px;
+            }
+
+            .navbar a {
+                margin-top: 5px;
+                font-size: 14px;
+            }
+
+            .section {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .section-text {
+                max-width: 100%;
+            }
+
+            .content h2 {
+                font-size: 26px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .content h2 {
+                font-size: 22px;
+            }
+
+            footer p {
+                font-size: 14px;
+            }
+
+            .footer-social a {
+                font-size: 20px;
+            }
+        }
+
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">Shrek Juice</div>
+      <a href="Index.html">Home</a>
+      <a href="BEVERAGES.html">Products</a>
+      <a href="Store location.html">Store Location</a>
+      <a href="franchise.html">Franchising</a>
+      <a href="catering.html">Catering</a>
+      <a href="Contact Us.html">Contact Us</a>
+      <a href="About Us.html">About Us</a>
+    </nav>
+
+    <div class="container">
+      
+      <div class="story">
+        <h2 style="margin: 10px;">Our Brand Story</h2>
+        <p>Welcome to <strong>Shrek Juice</strong> — where freshness, health, and flavor come together in every sip!</p>
+        <p>At <strong>Shrek Juice</strong>, we’re passionate about delivering high-quality, all-natural juices that nourish both your body and your taste buds. Founded on the belief that healthy living starts with what we consume, we carefully source the best fruits and vegetables to create refreshing, nutrient-packed beverages that are as delicious as they are good for you.</p>
+      </div>
+
+      <div class="vision">
+        <div class="text-left">
+          <h2  style="font-size: 35px; font-weight: bold;">Our Vision</h2>
+          <p>Our vision at Shrek Juice is a bold declaration of intent, paving the path toward a healthier, happier Pakistan. We aspire to dominance—to become the undisputed titan of the juice industry, stretching our reach far and wide across the length and breadth of this great nation. Yet, our vision extends beyond mere market supremacy; it is a rallying cry, urging consumers to embrace a lifestyle defined by vitality and balance.</p>
+        </div>
+        <img src="just a juice.avif" alt="image here" class="image-right" />
+      </div>
+
+      <div class="mission">
+        <div class="text-right">
+          <h2 style="font-size: 35px; font-weight: bold;">Our Mission</h2>
+          <p>Our mission is simple: to make healthy living easy and enjoyable for everyone. We want to bring the power of natural ingredients directly to you, providing you with a range of fresh, cold-pressed juices that are full of vitamins, minerals, and antioxidants. Whether you’re looking for a quick energy boost or a tasty way to hydrate, we’ve got a juice for you.</p>
+        </div>
+        <img src="juice-bar-scaled.webp" alt="image here" class="image-left" />
+      </div>
+
+     
+      <div class="content">
+        <p style="text-align: center;">Let's infuse some juice into the text to make it even more engaging and memorable.</p>
+        <h2 style="font-size: 40px;">Do you want to give feedback?</h2>
+        <a href="Feedback.html">
+        <button type="submit" class="cta-button" style="width: 100%; padding: 15px 0;">Feedback</button></a>
+    </div>
+      
+      
+    <footer>
+      <h2>Let’s stir things up and make your day a little juicier!</h2>
+      <p style="text-align:center;">&copy; 2025 Your Company Name. All rights reserved.</p>
+      <div class="footer-social">
+          <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+          <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
+          <a href="https://www.tiktok.com"><i class="fa-brands fa-tiktok"></i></a>
+      </div>
+  </footer>
+    </div>
+  </body>
+</html>

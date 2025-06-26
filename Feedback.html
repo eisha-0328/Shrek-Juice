@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Juice Feedback</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    crossorigin="anonymous" />
+
+  <style>
+    * {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f8f8;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 500px;
+      margin: 50px auto;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    input,
+    textarea,
+    button {
+      width: 100%;
+      margin: 10px 0;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    button {
+      background-color: #0e2d2f;
+      color: white;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #154246;
+    }
+
+    footer {
+      background-color: #0e2d2f;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .footer-social a {
+      margin: 0 15px;
+      color: white;
+      font-size: 30px;
+      transition: transform 0.3s ease;
+    }
+
+    .footer-social a:hover {
+      transform: scale(1.2);
+    }
+
+    
+
+    .navbar {
+      background-color: #0e2d2f;
+      padding: 20px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+
+    .navbar .logo {
+      color: #fff;
+      font-size: 36px;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      letter-spacing: 2px;
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      padding: 12px 20px;
+      font-size: 18px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+    }
+
+    .navbar a:hover {
+      background-color: #194e52;
+      border-radius: 5px;
+      color: #f0f0f0;
+    }
+    @media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 20px;
+  }
+
+  .navbar .logo {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+
+  .navbar a {
+    padding: 10px 0;
+    font-size: 16px;
+  }
+
+  .container {
+    width: 90%;
+    margin: 20px auto;
+    padding: 15px;
+  }
+
+  footer h2 {
+    font-size: 24px;
+  }
+
+  .footer-social a {
+    font-size: 24px;
+    margin: 0 10px;
+  }
+}
+
+
+  </style>
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="logo">Shrek Juice</div>
+    <a href="Index.html">Home</a>
+    <a href="BEVERAGES.html">Products</a>
+    <a href="Store location.html">Store Location</a>
+    <a href="franchise.html">Franchising</a>
+    <a href="catering.html">Catering</a>
+    <a href="Contact Us.html">Contact</a>
+    <a href="About Us.html">About Us</a>
+  </nav>
+
+
+  <div class="container">
+    <h2>We value your feedback!</h2>
+    <form id="feedbackForm" onsubmit="showAlert(event)">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <input type="number" id="rating" placeholder="Rating (1-5)" min="1" max="5" required>
+      <textarea id="message" placeholder="Your Feedback" required></textarea>
+      <button type="submit" class="submit-btn">Submit</button>
+    </form>
+
+    <script>
+      function showAlert(event) {
+        event.preventDefault();
+
+        alert("submitted");
+
+        document.getElementById("feedbackForm").submit();
+      }
+    </script>
+    <p id="confirmation" style="color: green; display: none;">Thank you for your feedback!</p>
+  </div>
+  <footer>
+    <h2 style="font-size: 36px;">Let’s stir things up and make your day a little juicier!</h2>
+    <p>&copy; 2025 Your Company Name. All rights reserved.</p>
+    <div class="footer-social">
+      <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+      <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
+      <a href="https://www.tiktok.com"><i class="fa-brands fa-tiktok"></i></a>
+    </div>
+  </footer>
+</body>
+
+</html>

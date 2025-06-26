@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shrek Juice Franchise</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      crossorigin="anonymous"
+    />
+
+    <style>
+      body {
+        background-color: #f4f4f4;
+        text-align: center;
+      }
+
+      .image {
+        background-color: white;
+        margin: 2px;
+        padding: 2px;
+      }
+
+      .franchise-intro {
+        padding: 40px;
+        background-color: #ffffff;
+      }
+
+      .franchise-intro h1 {
+        font-size: 36px;
+        color: #0b2a2c;
+        margin-bottom: 20px;
+      }
+
+      .franchise-intro p {
+        font-size: 18px;
+        color: #000000;
+        line-height: 1.6;
+      }
+
+      .franchise-details {
+        padding: 30px;
+        background-color: #ffffff;
+      }
+
+      .franchise-details h2 {
+        font-size: 36px;
+        color: #0b2a2c;
+        margin-bottom: 40px;
+      }
+
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+      }
+
+      .box {
+        background-color: #ee0f0f00;
+        border: 2px solid #0e0f0f;
+        padding: 20px;
+        width: 23%;
+        height: auto;
+        text-align: center;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .box:hover {
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      }
+
+      .box-img {
+        display: block;
+        margin: 0 auto 15px;
+        max-width: 80%;
+        height: auto;
+      }
+
+      .box h3 {
+        font-size: 18px;
+        color: #0b2a2c;
+        margin-bottom: 10px;
+      }
+
+      .box p {
+        font-size: 14px;
+        color: #0a0a0a;
+        line-height: 1.6;
+      }
+
+     
+
+      .btn-dark {
+        padding: 10px 20px;
+        margin: 20px 0;
+        background-color: orange;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+
+      .btn-dark:hover {
+        background-color: white;
+        color: black;
+      }
+h1,h2,h3{
+  font-weight: bold;
+}
+      .container {
+        width: 80%;
+        margin: auto;
+        padding: 30px;
+        background-color: #fff;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      }
+      h2 {
+        text-align: center;
+
+        margin-bottom: 40px;
+        font-size: 36px;
+      }
+      .step {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 30px;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        background-color: #f9f9f9;
+      }
+      .step img {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+      .step-content {
+        flex: 1;
+        margin-left: 20px;
+      }
+      .step-content h3 {
+        color: #0b2a2c;
+        font-size: 24px;
+        margin-bottom: 10px;
+        text-align: left;
+      }
+      .step-content p {
+        font-size: 16px;
+        color: #000000;
+      }
+      .step-number {
+        font-size: 30px;
+        font-weight: bold;
+        color: #fff;
+        background-color: #1a5e56;
+        padding: 15px;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .franchise-contact {
+        padding: 40px;
+        background-color: #ffffff;
+      }
+
+      .franchise-contact h2 {
+        font-size: 36px;
+        color: #0b2a2c;
+        margin-bottom: 20px;
+      }
+
+      .franchise-contact p {
+        font-size: 20px;
+        color: #0b2a2c;
+        margin-bottom: 30px;
+      }
+
+      .franchise-contact form {
+        max-width: 600px;
+        margin: 0 auto;
+        text-align: left;
+      }
+
+      .franchise-contact label {
+        font-size: 16px;
+        display: block;
+        margin-bottom: 8px;
+        color: #000;
+      }
+
+      .franchise-contact input,
+      .franchise-contact textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+      }
+
+      .franchise-contact button.submit-btn {
+        padding: 10px 20px;
+        margin: 20px 0;
+        background-color: #0e2d2f;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+
+      .franchise-contact button.submit-btn:hover {
+        background-color: #174347;
+      }
+      footer {
+        background-color: #0e2d2f;
+        color: white;
+        text-align: center;
+        padding: 20px;
+      }
+      .footer-social a {
+        margin: 0 15px;
+        color: white;
+        font-size: 30px;
+        transition: transform 0.3s ease;
+      }
+      .footer-social a:hover {
+        transform: scale(1.2);
+      }
+      .navbar {
+        background-color: #0e2d2f;
+        padding: 20px 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between; 
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+        position: sticky; 
+        top: 0;
+        z-index: 1000;
+      }
+
+      
+      .navbar .logo {
+        color: #fff;
+        font-size: 36px;
+        font-weight: bold; 
+        text-transform: uppercase; 
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; 
+        letter-spacing: 2px; 
+        display: flex;
+        align-items: center;
+      }
+
+      .navbar a {
+        color: white;
+        text-decoration: none;
+        padding: 12px 20px;
+        font-size: 18px;
+        font-weight: 500;
+        transition: all 0.3s ease; 
+        text-transform: uppercase;
+      }
+
+      .navbar a:hover {
+        background-color: #194e52; 
+        border-radius: 5px;
+        color: #f0f0f0;
+      }
+     .submit-btn{
+      width: 100px;
+     }
+     
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 20px;
+  }
+
+  .navbar .logo {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+
+  .navbar a {
+    padding: 10px 0;
+    font-size: 16px;
+  }
+
+  .container {
+    width: 90%;
+    margin: 20px auto;
+    padding: 15px;
+  }
+
+  .box {
+    width: 48%;
+    margin-bottom: 20px;
+  }
+
+  .footer-social a {
+    font-size: 24px;
+    margin: 0 10px;
+  }
+
+  .franchise-intro h1 {
+    font-size: 30px;
+  }
+
+  .franchise-intro p {
+    font-size: 16px;
+  }
+
+  .franchise-contact h2 {
+    font-size: 30px;
+  }
+
+  .step {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .step-number {
+    margin-bottom: 10px;
+  }
+
+  .step img {
+    width: 100%;
+    max-width: 150px;
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 10px 15px;
+  }
+
+  .navbar a {
+    font-size: 14px;
+    padding: 8px 0;
+  }
+
+  .container {
+    width: 95%;
+    padding: 10px;
+  }
+
+  .box {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .franchise-intro h1 {
+    font-size: 26px;
+  }
+
+  .franchise-intro p {
+    font-size: 14px;
+  }
+
+  .franchise-contact h2 {
+    font-size: 28px;
+  }
+
+  .franchise-contact form {
+    padding: 10px;
+  }
+
+  .footer-social a {
+    font-size: 20px;
+    margin: 0 8px;
+  }
+
+  .step-number {
+    font-size: 24px;
+    padding: 10px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .step img {
+    width: 100%;
+    max-width: 120px;
+  }
+}
+
+    
+
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">Shrek Juice</div>
+      <a href="Index.html">Home</a>
+      <a href="BEVERAGES.html">Products</a>
+      <a href="Store location.html">Store Location</a>
+      <a href="franchise.html">Franchising</a>
+      <a href="catering.html">Catering</a>
+      <a href="Contact Us.html">Contact</a>
+      <a href="About Us.html">About Us</a>
+    </nav>
+
+    <div class="image">
+      <img src="intro.jpg" alt="intro" />
+    </div>
+
+    <section class="franchise-intro">
+      <h1>Own a Juice Station</h1>
+      <p>
+        Join the Shrek Juice family and become a part of Pakistan’s leading
+        health and wellness brand. Bring pure, delicious, and healthy beverages
+        to your community while achieving your business dreams.
+      </p>
+    </section>
+
+    <section class="franchise-details">
+      <h2>Why Partner with Shrek Juice?</h2>
+      <div class="container">
+        <div class="box">
+          <img src="juice glass.png" alt="Strong Brand" class="box-img" />
+          <h3>Strong Brand Recognition</h3>
+          <p>
+            Shrek Juice's unique and fun brand, paired with a loyal customer
+            base, makes us a standout in the beverage industry.
+          </p>
+        </div>
+        <div class="box">
+          <img src="juice glass.png" alt="training" class="box-img" />
+          <h3>Comprehensive Training</h3>
+          <p>
+            We provide thorough training in operations and customer service,
+            equipping you with the skills needed to run a successful business.
+          </p>
+        </div>
+        <div class="box">
+          <img src="juice glass.png" alt="Marketing" class="box-img" />
+          <h3>Marketing Support</h3>
+          <p>
+            Benefit from our proven marketing strategies designed to help you
+            attract customers and expand your business.
+          </p>
+        </div>
+        <div class="box">
+          <img src="juice glass.png" alt="Profit" class="box-img" />
+          <h3>High Profit Potential</h3>
+          <p>
+            With high-quality products and an efficient business model, we set
+            you up for maximum profitability.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <a href="Contact Us.html">
+      <button class="btn-dark">Enquire Now</button>
+    </a>
+
+    <section class="how-to-apply">
+      <div class="container">
+        <h2>How to Get Started with Your Shrek Juice Franchise</h2>
+
+        <div class="step">
+          <div class="step-number">1</div>
+          <div class="step-content">
+            <h3>Review the Franchise Requirements</h3>
+            <p>
+              Make sure you meet all the criteria to become a part of the Shrek
+              Juice franchise family.
+            </p>
+          </div>
+          <img src="image1.png" alt="Step 1 Image" />
+        </div>
+
+        <div class="step">
+          <div class="step-number">2</div>
+          <div class="step-content">
+            <h3>Fill Out the Contact Form</h3>
+            <p>
+              Request more information by filling out the contact form, and
+              we'll get back to you shortly.
+            </p>
+          </div>
+          <img src="image2.jpg" alt="Step 2 Image" />
+        </div>
+
+        <div class="step">
+          <div class="step-number">3</div>
+          <div class="step-content">
+            <h3>Schedule a Consultation</h3>
+            <p>
+              Meet with our Franchise Team to discuss your future and the
+              opportunities available to you.
+            </p>
+          </div>
+          <img src="image3.jpg" alt="Step 3 Image" />
+        </div>
+
+        <div class="step">
+          <div class="step-number">4</div>
+          <div class="step-content">
+            <h3>Sign the Agreement and Get Started!</h3>
+            <p>
+              Once everything is in place, sign the agreement and start your
+              exciting journey with Shrek Juice.
+            </p>
+          </div>
+          <img src="imgage4.jpg" alt="Step 4 Image" />
+        </div>
+      </div>
+    </section>
+
+    <section class="franchise-contact">
+      <h2>Contact Us for More Information</h2>
+      <p>
+        Fill out the form below to request more details about becoming a Shrek
+        Juice franchisee. Our team will get in touch with you shortly!
+      </p>
+    <form id="contactForm" action="submit_form.php" method="POST">
+    <label for="name">Full Name</label>
+    <input type="text" id="name" name="name" required />
+
+    <label for="email">Email Address</label>
+    <input type="email" id="email" name="email" required />
+
+    <label for="phone">Phone Number</label>
+    <input type="tel" id="phone" name="phone" required />
+
+    <label for="message">Why are you interested in becoming a franchisee?</label>
+    <textarea id="message" name="message" required></textarea>
+    
+    <button type="submit" class="submit-btn">Submit</button>
+</form>
+
+<p id="confirmation" style="display: none; color: green;">
+</p>
+
+<script>
+    document.getElementById("contactForm").addEventListener("submit", function(event) {
+        event.preventDefault(); 
+        alert("Your message has been submitted successfully!");
+        
+        document.getElementById("confirmation").style.display = "block";
+        
+    });
+</script>
+
+
+     
+    </section>
+    <footer>
+      <h2 style="font-size: 36px">
+        Let’s stir things up and make your day a little juicier!
+      </h2>
+      <p>&copy; 2025 Your Company Name. All rights reserved.</p>
+      <div class="footer-social">
+        <a href="https://www.facebook.com/"
+          ><i class="fa-brands fa-facebook"></i
+        ></a>
+        <a href="https://www.instagram.com/"
+          ><i class="fa-brands fa-instagram"></i
+        ></a>
+        <a href="https://www.youtube.com/"
+          ><i class="fa-brands fa-youtube"></i
+        ></a>
+        <a href="https://www.tiktok.com"><i class="fa-brands fa-tiktok"></i></a>
+      </div>
+    </footer>
+  </body>
+</html>
